@@ -16,7 +16,10 @@ main = Blueprint('main', __name__)
 @main.route('/')
 def home():
     users = User.query.all()
-    cu = CurrentUser.query.first().user_id
+    try:
+        cu = CurrentUser.query.first().user_id
+    except:
+        cu = None
     cUser = User.query.get(cu)
     contacts = Contact.query.filter_by(user_id=cu).all()
 

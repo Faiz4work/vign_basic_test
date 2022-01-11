@@ -21,4 +21,3 @@ SQLAlchemy==1.4.29
 texttable==1.6.4
 Werkzeug==2.0.2
 whichcraft==0.6.1
-globe2
